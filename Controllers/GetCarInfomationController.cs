@@ -6,9 +6,10 @@ using Car.Model;
 public class GetCarInfomationController : ControllerBase
 {
     [HttpPost]
-    public IActionResult Post([FromBody] GetCarInfomationModel model)
+    public IActionResult Post(GetCarInfomationRequestModel model)
     {
-        var returnData = model.GetCarInfomation(model);
+        GetCarInfomationModel getCarInfomationModel = new GetCarInfomationModel();
+        var returnData = getCarInfomationModel.GetCarInfomation(model);
         return Ok(new { message = "Car information received successfully." });
     }
 }
