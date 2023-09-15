@@ -1,39 +1,43 @@
-# ������T�t��
+# 目的
+這是LionChad專為鐵人賽三十天所寫之範例程式，程式內提供之廠商與任何相關內容都與實際上無關。
+鐵人賽連結
+https://ithelp.ithome.com.tw/articles/10317189
 
-�o�OLionChad�M���K�H�ɤT�Q�ѩҼg���d�ҵ{���A�{�������Ѥ��t�ӻP����������e���P��ڤW�L���C
-���e��:�o�O�@�Ө�����T�������t�ΡA���b�B�z���P�����~�P����T�C
+# 車輛資訊系統
 
-## �\��S�I
+此程式內容為:這是一個車輛資訊相關的系統，旨在處理不同車輛品牌的資訊。
 
-- ���Ѥ��P�~�P��������T�d�ߡC
-- �ϥΨ����ӪA�Ȩ����������T�C
-- �䴩�~�P�GVOLVO�BAMC�B�S���ԡC
+## 功能特點
 
-## �{���X���c
+- 提供不同品牌車輛的資訊查詢。
+- 使用供應商服務來獲取車輛資訊。
+- 支援品牌：VOLVO、AMC、特斯拉。
 
-- 'Model'�G�]�t������T��������Ƽҫ��C
-- 'Interfaces'�G�w�q�����Ω󨮽���T�A�ȡC
-- 'Service'�G��{������T�A�Ȫ����O�C
-- 'SupplierService'�G�����ӪA�Ȭ��������O�M�غc���C
-- 'Controllers'�G�B�z������T������ API ����C
+## 程式碼結構
 
-## �p��ϥ�
+- 'Model'：包含車輛資訊相關的資料模型。
+- 'Interfaces'：定義介面用於車輛資訊服務。
+- 'Service'：實現車輛資訊服務的類別。
+- 'SupplierService'：供應商服務相關的類別和建構器。
+- 'Controllers'：處理車輛資訊相關的 API 控制器。
 
-1. �b�A���{���X���ޥά������R�W�Ŷ��C
-2. �ϥ� 'GetCarInfomationController' ����Ӭd�ߨ�����T�C
-3. �i�H�ھڻݭn�X�i�M�w��A�ȩM��Ƽҫ��C
+## 如何使用
 
-## �ݨD
+1. 在你的程式碼中引用相關的命名空間。
+2. 使用 'GetCarInfomationController' 控制器來查詢車輛資訊。
+3. 可以根據需要擴展和定制服務和資料模型。
 
-- .NET Core 3.1 �Χ󰪪����C
+## 需求
 
-## �w�˻P����
+- .NET Core 3.1 或更高版本。
 
-1. �U���ΧJ�����M�ר�A�����a���ҡC
-2. �ϥ� Visual Studio �ΩR�O�C�u��sĶ�M����C
+## 安裝與執行
 
-## �^�m
+1. 下載或克隆此專案到你的本地環境。
+2. 使用 Visual Studio 或命令列工具編譯和執行。
+
+## 貢獻
 
 
-## ���v
+## 授權
 
