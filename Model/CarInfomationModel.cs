@@ -2,7 +2,7 @@
 {
     public abstract class CarInfomationModel : VehicleModel
     {
-        public string Oil { get; set; }
+        public string Gasoline { get; set; }
         public string Rate { get; set; }
         public string Supplier { get; set; }
         public string Color { get; set; }
