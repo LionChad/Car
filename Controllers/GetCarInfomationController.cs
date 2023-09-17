@@ -11,25 +11,40 @@ public class GetCarInfomationController : ControllerBase
         ParentClass parentClass = new ParentClass();
         ChildOverwriteClass childOverwriteClass = new ChildOverwriteClass();
 
-        //"Hi"
+        //"Hi"  public 可  protected 不可  private 不可
         string parentClassshadowMessage = parentClass.shadowMessage;
-        //"XXX"
+
+        //"XXX"  public 可  protected 不可  private 不可
         string parentClassoverridMeessage = parentClass.overridMeessage;
-        //null
+
+        //null  public 可  protected 不可  private 不可
         string parentClassmessage = parentClass.message;
-        //"XXX"
+
+        //"XXX"  public 可  protected 可  private 可
         string parentClassOverridMeessage = parentClass.OverridMeessage;
-        //null
+
+        //null  public 可  protected 可  private 可
         string parentClassMessage = parentClass.Message;
 
+
+
+        //  public 可  protected 可  private 可
         //shadowMessage遮蓋（shadow）父類別中的 message屬性 : null
         string childOverwriteClassshadowMessage = childOverwriteClass.shadowMessage;
+
+        //  public 可  protected 不可  private 不可
         //overridMeessage 調用到父類別 : "XXX"
         string childOverwriteClassoverridMeessage = childOverwriteClass.overridMeessage;
+
+        //  public 可  protected 不可  private 不可
         //message 調用到父類別 由於子類別有建構子 : "OOO"
         string childOverwriteClassmessage = childOverwriteClass.message;
+
+        //  public 可  protected 可  private 可
         //Hello from ChildClass  >> 調用到Overwrite : "Hello from ChildClass"
         string childOverwriteClassOverridMeessage = childOverwriteClass.OverridMeessage;
+
+        //  public 可  protected 可  private 可但因message在建構子不可，所以不可，所以應該要給可
         //Message 調用到父類別 由於子類別有建構子 : "OOO"
         string childOverwriteClassMessage = childOverwriteClass.Message;
 
