@@ -1,18 +1,27 @@
 ﻿namespace Car.Model
 {
-    public class CaeModel
+    public class CarModel : VehicleModel
     {
         private string licensePlate;
         private string brand;
         private string color;
         private bool engineRunning;
 
-        public CaeModel(string licensePlate, string brand, string color)
+        public CarModel(string licensePlate, string brand, string color)
         {
             this.licensePlate = licensePlate;
             this.brand = brand;
             this.color = color;
             this.engineRunning = false;
+        }
+
+        public CarModel()
+        {
+        }
+
+        public override void Move()
+        {
+            Console.WriteLine("Car is moving...");
         }
 
         public void StartEngine()

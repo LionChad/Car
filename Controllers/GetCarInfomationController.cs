@@ -8,6 +8,7 @@ public class GetCarInfomationController : ControllerBase
     [HttpPost]
     public IActionResult Post([FromBody] GetCarInfomationModel model)
     {
+        #region 初階面試常見題目回答-繼承-鐵人賽第三日
         ParentClass parentClass = new ParentClass();
         ChildOverwriteClass childOverwriteClass = new ChildOverwriteClass();
 
@@ -48,8 +49,24 @@ public class GetCarInfomationController : ControllerBase
         //Message 調用到父類別 由於子類別有建構子 : "OOO"
         string childOverwriteClassMessage = childOverwriteClass.Message;
 
+        #endregion
+
+        #region 初階面試常見題目回答-OOP設計概念-鐵人賽第五日
+
+        VehicleModel vehicle1 = new CarModel();
+        VehicleModel vehicle2 = new Airplane();
+
+        MoveAndPrint(vehicle1);
+        MoveAndPrint(vehicle2);
+        #endregion
+
         var returnData = model.GetCarInfomation(model);
 
         return Ok(new { message = "Car information received successfully." });
+    }
+
+    private static void MoveAndPrint(VehicleModel vehicle)
+    {
+        vehicle.Move();
     }
 }
