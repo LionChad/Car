@@ -1,9 +1,22 @@
 ﻿namespace Car.Model
 {
-    public class MoveModel
+    // 定義移動介面
+    public interface IMovable
     {
-        //載具，假定汽車
-        public void Move(int Gasoline)
+        void Move();
+    }
+
+    // 汽車類別實現IMovable介面
+    public class Car : IMovable
+    {
+        private int Gasoline;
+
+        public Car(int initialGasoline)
+        {
+            Gasoline = initialGasoline;
+        }
+
+        public void Move()
         {
             #region 流程
 
@@ -18,9 +31,21 @@
             }
             #endregion 流程
         }
+    }
 
-        //人力載具，假定腳踏車
-        public void Move(int humanity, double cal)
+    // 腳踏車類別實現IMovable介面
+    public class Bicycle : IMovable
+    {
+        private int humanity;
+        private double cal;
+
+        public Bicycle(int initialHumanity, double initialCal)
+        {
+            humanity = initialHumanity;
+            cal = initialCal;
+        }
+
+        public void Move()
         {
             #region 流程
 
@@ -36,11 +61,20 @@
             }
             #endregion 流程
         }
+    }
 
-        //單純以人力移動，假定走路
-        public void Move(double cal)
+    // 人類類別實現IMovable介面
+    public class Human : IMovable
+    {
+        private double cal;
+
+        public Human(double initialCal)
         {
-            #region 流程
+            cal = initialCal;
+        }
+
+        public void Move()
+        {
             if (cal >= 1)
             {
                 Console.WriteLine("Human is moving.");
@@ -50,7 +84,6 @@
             {
                 Console.WriteLine("Human does not have enough energy to move.");
             }
-            #endregion 流程
         }
     }
 }
